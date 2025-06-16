@@ -44,6 +44,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'AWS for Scientific Computing';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="AI Overviews" href="ai-overviews.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -106,8 +107,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -150,9 +149,13 @@
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="todo.html">To Do</a></li>
 <li class="toctree-l1"><a class="reference internal" href="to-read.html">To Read</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="ai-overviews.html">AI Overviews</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Strategic Adoption of AWS for Scientific Computing at Takeda Pharmaceuticals: Batch, ParallelCluster, and HealthOmics</strong></a></li>
+</ul>
+</details></li>
 </ul>
 
     </div>
@@ -304,23 +307,23 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#executive-summary"><strong>1. Executive Summary</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-accelerating-pharmaceutical-r-d-with-aws-cloud"><strong>2. Introduction: Accelerating Pharmaceutical R&amp;D with AWS Cloud</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aws-batch-managed-containerized-compute-for-high-throughput-workloads"><strong>3. AWS Batch: Managed Containerized Compute for High-Throughput Workloads</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#core-functionalities-and-architecture"><strong>Core Functionalities and Architecture</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-core-functionalities-and-architecture"><strong>Batch Core Functionalities and Architecture</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typical-use-cases-in-scientific-computing"><strong>Typical Use Cases in Scientific Computing</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introductory-resources"><strong>Introductory Resources</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-introductory-resources"><strong>Batch Introductory Resources</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#managed-hpc-for-takeda-s-container-strategy"><strong>Managed HPC for Takeda’s Container Strategy</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aws-parallelcluster-deploying-and-managing-hpc-environments-in-the-cloud"><strong>4. AWS ParallelCluster: Deploying and Managing HPC Environments in the Cloud</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Core Functionalities and Architecture</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parallelcluster-core-functionalities-and-architecture"><strong>ParallelCluster Core Functionalities and Architecture</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-use-cases-in-scientific-computing"><strong>Common Use Cases in Scientific Computing</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Introductory Resources</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parallelcluster-introductory-resources"><strong>ParallelCluster Introductory Resources</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bridging-on-premises-hpc-to-cloud-for-takeda"><strong>Bridging On-Premises HPC to Cloud for Takeda</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aws-healthomics-purpose-built-for-multi-omics-data-analysis"><strong>5. AWS HealthOmics: Purpose-Built for Multi-Omics Data Analysis</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose-and-key-features"><strong>Purpose and Key Features</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-applications-and-use-cases-in-pharmaceutical-genomics"><strong>Example Applications and Use Cases in Pharmaceutical Genomics</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><strong>Introductory Resources</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#healthomics-introductory-resources"><strong>HealthOmics Introductory Resources</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#healthomics-as-a-strategic-differentiator-for-takeda-s-genomics-initiatives"><strong>HealthOmics as a Strategic Differentiator for Takeda’s Genomics Initiatives</strong></a></li>
 </ul>
 </li>
@@ -334,10 +337,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#considerations-for-takeda-s-implementation"><strong>Considerations for Takeda’s Implementation</strong></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion"><strong>8. Conclusion</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#works-cited"><strong>Works cited</strong></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion"><strong>8. Conclusion</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#works-cited"><strong>Works cited</strong></a></li>
 </ul>
             </nav>
         </div>
@@ -365,8 +366,8 @@ document.write(`
 <section id="aws-batch-managed-containerized-compute-for-high-throughput-workloads">
 <h2><strong>3. AWS Batch: Managed Containerized Compute for High-Throughput Workloads</strong><a class="headerlink" href="#aws-batch-managed-containerized-compute-for-high-throughput-workloads" title="Link to this heading">#</a></h2>
 <p>AWS Batch is a fully managed service designed to execute batch computing workloads of virtually any scale within the cloud environment.5 It significantly reduces operational burden by abstracting away the complexities associated with provisioning and managing underlying compute resources, thereby enabling scientists and engineers to concentrate primarily on their computational jobs and data analysis rather than infrastructure management.5</p>
-<section id="core-functionalities-and-architecture">
-<h3><strong>Core Functionalities and Architecture</strong><a class="headerlink" href="#core-functionalities-and-architecture" title="Link to this heading">#</a></h3>
+<section id="batch-core-functionalities-and-architecture">
+<h3><strong>Batch Core Functionalities and Architecture</strong><a class="headerlink" href="#batch-core-functionalities-and-architecture" title="Link to this heading">#</a></h3>
 <p>The architecture of AWS Batch is built upon several fundamental concepts that facilitate efficient job execution:</p>
 <ul class="simple">
 <li><p><strong>Jobs:</strong> A job represents the basic unit of work within AWS Batch. This can be a shell script, an executable, or, most commonly, a containerized application.5 Each job is executed as a Docker container, leveraging either AWS Fargate (for serverless containers) or Amazon EC2 instances (for more configurable compute) within a specified compute environment.5 Jobs can be configured with dependencies, meaning one job can be set to wait for the successful completion of another, and can be submitted individually, as part of an array, or within a larger pipeline.5</p></li>
@@ -385,8 +386,8 @@ document.write(`
 <li><p><strong>Multi-Node Parallel Jobs with MPI Libraries:</strong> Significantly, AWS Batch possesses the capability to run multi-node parallel jobs that leverage Message Passing Interface (MPI) libraries. This feature enables it to support traditional High-Performance Computing (HPC) workloads requiring inter-instance communication within its containerized framework.5 This adaptability allows for the execution of jobs with demanding CPU/GPU requirements and large memory footprints, common in complex scientific computations.5</p></li>
 </ul>
 </section>
-<section id="introductory-resources">
-<h3><strong>Introductory Resources</strong><a class="headerlink" href="#introductory-resources" title="Link to this heading">#</a></h3>
+<section id="batch-introductory-resources">
+<h3><strong>Batch Introductory Resources</strong><a class="headerlink" href="#batch-introductory-resources" title="Link to this heading">#</a></h3>
 <p>For organizations initiating their journey with AWS Batch, the following resources provide comprehensive guidance:</p>
 <ul class="simple">
 <li><p><strong>AWS Batch User Guide:</strong> The official user guide serves as an exhaustive starting point, detailing how to create compute environments, define jobs, submit tasks, manage IAM permissions, and implement best practices for running workloads at scale.7</p>
@@ -409,8 +410,8 @@ document.write(`
 <section id="aws-parallelcluster-deploying-and-managing-hpc-environments-in-the-cloud">
 <h2><strong>4. AWS ParallelCluster: Deploying and Managing HPC Environments in the Cloud</strong><a class="headerlink" href="#aws-parallelcluster-deploying-and-managing-hpc-environments-in-the-cloud" title="Link to this heading">#</a></h2>
 <p>AWS ParallelCluster is a free, open-source cluster management tool designed to simplify the deployment and ongoing management of High-Performance Computing (HPC) clusters within the AWS environment.9 It streamlines the configuration of essential HPC components, including compute nodes, shared filesystems, and job schedulers, providing a familiar experience for HPC users.9</p>
-<section id="id1">
-<h3><strong>Core Functionalities and Architecture</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<section id="parallelcluster-core-functionalities-and-architecture">
+<h3><strong>ParallelCluster Core Functionalities and Architecture</strong><a class="headerlink" href="#parallelcluster-core-functionalities-and-architecture" title="Link to this heading">#</a></h3>
 <p>AWS ParallelCluster is engineered to replicate the environment of a traditional HPC cluster while leveraging the elasticity and scalability of the cloud:</p>
 <ul class="simple">
 <li><p><strong>Traditional HPC Cluster Setup:</strong> ParallelCluster provides a familiar interface, often integrating with widely used job schedulers such as Slurm.11 This familiarity facilitates the migration of existing on-premises HPC workloads to the cloud or allows organizations to burst computational capacity to AWS with minimal modifications to their existing workflows.10</p></li>
@@ -430,8 +431,8 @@ document.write(`
 <li><p><strong>Lift-and-Shift HPC Migrations:</strong> ParallelCluster facilitates a seamless transition for organizations with existing on-premises HPC clusters and their associated workloads, allowing them to migrate or burst capacity to the cloud with minimal modifications to their established environments.10</p></li>
 </ul>
 </section>
-<section id="id2">
-<h3><strong>Introductory Resources</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<section id="parallelcluster-introductory-resources">
+<h3><strong>ParallelCluster Introductory Resources</strong><a class="headerlink" href="#parallelcluster-introductory-resources" title="Link to this heading">#</a></h3>
 <p>To begin working with AWS ParallelCluster, the following resources are highly recommended:</p>
 <ul class="simple">
 <li><p><strong>AWS ParallelCluster User Guide Tutorials (v3):</strong> This guide offers a range of tutorials covering how to configure and create a cluster using either the CLI or the UI, connect to a cluster, and execute MPI jobs. It also delves into advanced topics such as Active Directory integration and various networking patterns.14</p>
@@ -477,8 +478,8 @@ document.write(`
 <li><p><strong>Variant Calling Pipelines:</strong> Natera successfully migrated a significant portion of its variant calling pipelines to AWS HealthOmics, resulting in a dramatic improvement in innovation cycles—from weeks or months down to days or hours—while strictly maintaining HIPAA compliance.22 Similarly, Amgen standardized and simplified access to cloud-based epigenomics analysis pipelines using HealthOmics, achieving a notable 40% overall cost savings.23</p></li>
 </ul>
 </section>
-<section id="id3">
-<h3><strong>Introductory Resources</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<section id="healthomics-introductory-resources">
+<h3><strong>HealthOmics Introductory Resources</strong><a class="headerlink" href="#healthomics-introductory-resources" title="Link to this heading">#</a></h3>
 <p>For Takeda to explore AWS HealthOmics, the following introductory resources are recommended:</p>
 <ul class="simple">
 <li><p><strong>Official AWS HealthOmics Page:</strong> This page provides a concise yet comprehensive overview of the service’s benefits, core capabilities, and various use cases, serving as an excellent initial point of reference.17</p>
@@ -745,8 +746,9 @@ For Takeda’s “scientific support software,” the relationship between these
 <h2><strong>8. Conclusion</strong><a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
 <p>AWS Batch, AWS ParallelCluster, and AWS HealthOmics offer distinct yet profoundly complementary capabilities that are highly relevant to Takeda Pharmaceuticals’ scientific computing requirements. AWS Batch excels at providing a fully managed, scalable environment for containerized, high-throughput workloads, including those requiring multi-node parallel processing. AWS ParallelCluster delivers a robust and familiar environment for traditional High-Performance Computing, particularly for tightly coupled simulations and seamless migration of existing HPC infrastructure. AWS HealthOmics stands as a purpose-built, compliant platform specifically designed to manage, analyze, and derive insights from the complexities of multi-omics data, streamlining bioinformatics workflows.</p>
 <p>Crucially, AWS Step Functions emerges as the critical orchestration layer, enabling the construction of resilient, auditable, and automated multi-step scientific pipelines that seamlessly integrate these and other AWS services. By strategically adopting and integrating these AWS services, Takeda Pharmaceuticals can significantly accelerate its drug discovery and development cycles, enhance the depth and speed of data-driven insights, ensure stringent regulatory compliance, and ultimately bring life-changing medicines to patients faster.15 The continuous evolution of AWS services, including advancements in artificial intelligence/machine learning and the integration of cutting-edge quantum computing capabilities, positions Takeda to remain at the forefront of biomedical innovation, transforming scientific challenges into therapeutic breakthroughs.</p>
+</section>
 <section id="works-cited">
-<h3><strong>Works cited</strong><a class="headerlink" href="#works-cited" title="Link to this heading">#</a></h3>
+<h2><strong>Works cited</strong><a class="headerlink" href="#works-cited" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>From Big Data to Precision Medicine: How AWS is Shaping the …, accessed June 16, 2025, <a class="reference external" href="https://businesscompassllc.com/from-big-data-to-precision-medicine-how-aws-is-shaping-the-biotech-industry/">https://businesscompassllc.com/from-big-data-to-precision-medicine-how-aws-is-shaping-the-biotech-industry/</a></p></li>
 <li><p>AWS in the Pharmaceutical Industry: Powering Drug Discovery, Development, and Beyond, accessed June 16, 2025, <a class="reference external" href="https://intuitionlabs.ai/articles/aws-in-pharma-industry">https://intuitionlabs.ai/articles/aws-in-pharma-industry</a></p></li>
@@ -782,7 +784,6 @@ For Takeda’s “scientific support software,” the relationship between these
 </ol>
 </section>
 </section>
-</section>
 
 
                 </article>
@@ -795,6 +796,15 @@ For Takeda’s “scientific support software,” the relationship between these
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="ai-overviews.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">AI Overviews</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
@@ -814,23 +824,23 @@ For Takeda’s “scientific support software,” the relationship between these
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#executive-summary"><strong>1. Executive Summary</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-accelerating-pharmaceutical-r-d-with-aws-cloud"><strong>2. Introduction: Accelerating Pharmaceutical R&amp;D with AWS Cloud</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aws-batch-managed-containerized-compute-for-high-throughput-workloads"><strong>3. AWS Batch: Managed Containerized Compute for High-Throughput Workloads</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#core-functionalities-and-architecture"><strong>Core Functionalities and Architecture</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-core-functionalities-and-architecture"><strong>Batch Core Functionalities and Architecture</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typical-use-cases-in-scientific-computing"><strong>Typical Use Cases in Scientific Computing</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introductory-resources"><strong>Introductory Resources</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-introductory-resources"><strong>Batch Introductory Resources</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#managed-hpc-for-takeda-s-container-strategy"><strong>Managed HPC for Takeda’s Container Strategy</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aws-parallelcluster-deploying-and-managing-hpc-environments-in-the-cloud"><strong>4. AWS ParallelCluster: Deploying and Managing HPC Environments in the Cloud</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Core Functionalities and Architecture</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parallelcluster-core-functionalities-and-architecture"><strong>ParallelCluster Core Functionalities and Architecture</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-use-cases-in-scientific-computing"><strong>Common Use Cases in Scientific Computing</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Introductory Resources</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parallelcluster-introductory-resources"><strong>ParallelCluster Introductory Resources</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bridging-on-premises-hpc-to-cloud-for-takeda"><strong>Bridging On-Premises HPC to Cloud for Takeda</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aws-healthomics-purpose-built-for-multi-omics-data-analysis"><strong>5. AWS HealthOmics: Purpose-Built for Multi-Omics Data Analysis</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose-and-key-features"><strong>Purpose and Key Features</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-applications-and-use-cases-in-pharmaceutical-genomics"><strong>Example Applications and Use Cases in Pharmaceutical Genomics</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><strong>Introductory Resources</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#healthomics-introductory-resources"><strong>HealthOmics Introductory Resources</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#healthomics-as-a-strategic-differentiator-for-takeda-s-genomics-initiatives"><strong>HealthOmics as a Strategic Differentiator for Takeda’s Genomics Initiatives</strong></a></li>
 </ul>
 </li>
@@ -844,10 +854,8 @@ For Takeda’s “scientific support software,” the relationship between these
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#considerations-for-takeda-s-implementation"><strong>Considerations for Takeda’s Implementation</strong></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion"><strong>8. Conclusion</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#works-cited"><strong>Works cited</strong></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion"><strong>8. Conclusion</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#works-cited"><strong>Works cited</strong></a></li>
 </ul>
   </nav></div>
 

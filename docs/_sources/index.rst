@@ -20,3 +20,4 @@ Key objectives include:
 
    todo
    to-read
+   ai-overviews

@@ -6,7 +6,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Search - Takeda Parallel Compute Prep  documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>AI Overviews &#8212; Takeda Parallel Compute Prep  documentation</title>
   
   
   
@@ -39,12 +41,11 @@
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'search';</script>
-  <script src="_static/searchtools.js"></script>
-  <script src="_static/language_data.js"></script>
-  <script src="searchindex.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ai-overviews';</script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Strategic Adoption of AWS for Scientific Computing at Takeda Pharmaceuticals: Batch, ParallelCluster, and HealthOmics" href="AWS%20for%20Scientific%20Computing.html" />
+    <link rel="prev" title="To Read" href="to-read.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -76,7 +77,7 @@
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
-      action="#"
+      action="search.html"
       method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search"
@@ -106,8 +107,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -151,10 +150,10 @@
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="todo.html">To Do</a></li>
 <li class="toctree-l1"><a class="reference internal" href="to-read.html">To Read</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="ai-overviews.html">AI Overviews</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">AI Overviews</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="AWS%20for%20Scientific%20Computing.html"><strong>Strategic Adoption of AWS for Scientific Computing at Takeda Pharmaceuticals: Batch, ParallelCluster, and HealthOmics</strong></a></li>
 </ul>
 </details></li>
@@ -202,6 +201,54 @@
 
 
 
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/ai-overviews.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
 <button onclick="toggleFullScreen()"
   class="btn btn-sm btn-fullscreen-button"
   title="Fullscreen mode"
@@ -244,42 +291,47 @@ document.write(`
 </div>
               
               
-  <div class="bd-search-container">
-    <h1>Search</h1>
-    <noscript>
-      <div class="admonition error">
-        <p class="admonition-title">Error</p>
-        <p>Please activate JavaScript to enable the search functionality.</p>
-      </div>
-    </noscript>
-    
-<form class="bd-search d-flex align-items-center"
-      action="#"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-    <div id="search-results"></div>
-  </div>
-  <script>
-    // Activate the search field on page load
-    let searchInput = document.querySelector("form.bd-search input");
-    if (searchInput) {
-        searchInput.focus();
-        searchInput.select();
-        console.log("[PST]: Set focus on search field.");
-    }
-  </script>
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>AI Overviews</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="ai-overviews">
+<h1>AI Overviews<a class="headerlink" href="#ai-overviews" title="Link to this heading">#</a></h1>
+<p>This section contains overviews and answers generated by LLMs to help guide my learning.</p>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="AWS%20for%20Scientific%20Computing.html"><strong>Strategic Adoption of AWS for Scientific Computing at Takeda Pharmaceuticals: Batch, ParallelCluster, and HealthOmics</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AWS%20for%20Scientific%20Computing.html#executive-summary"><strong>1. Executive Summary</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AWS%20for%20Scientific%20Computing.html#introduction-accelerating-pharmaceutical-r-d-with-aws-cloud"><strong>2. Introduction: Accelerating Pharmaceutical R&amp;D with AWS Cloud</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AWS%20for%20Scientific%20Computing.html#aws-batch-managed-containerized-compute-for-high-throughput-workloads"><strong>3. AWS Batch: Managed Containerized Compute for High-Throughput Workloads</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AWS%20for%20Scientific%20Computing.html#aws-parallelcluster-deploying-and-managing-hpc-environments-in-the-cloud"><strong>4. AWS ParallelCluster: Deploying and Managing HPC Environments in the Cloud</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AWS%20for%20Scientific%20Computing.html#aws-healthomics-purpose-built-for-multi-omics-data-analysis"><strong>5. AWS HealthOmics: Purpose-Built for Multi-Omics Data Analysis</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AWS%20for%20Scientific%20Computing.html#comparative-analysis-orchestrating-scientific-workflows-at-takeda"><strong>6. Comparative Analysis: Orchestrating Scientific Workflows at Takeda</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AWS%20for%20Scientific%20Computing.html#strategic-recommendations-for-takeda-pharmaceuticals"><strong>7. Strategic Recommendations for Takeda Pharmaceuticals</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AWS%20for%20Scientific%20Computing.html#conclusion"><strong>8. Conclusion</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AWS%20for%20Scientific%20Computing.html#works-cited"><strong>Works cited</strong></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+                </article>
+              
 
               
               
@@ -288,6 +340,24 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="to-read.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">To Read</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="AWS%20for%20Scientific%20Computing.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>Strategic Adoption of AWS for Scientific Computing at Takeda Pharmaceuticals: Batch, ParallelCluster, and HealthOmics</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
