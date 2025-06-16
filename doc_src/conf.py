@@ -55,5 +55,5 @@ html_theme_options = {
 plantuml = r'java -jar "C:\Users\rward\AppData\Local\JetBrains\PyCharm2024.3\markdown\download\plantumllanguageextension\plantuml.jar"'
 plantuml_output_format = 'svg'
 
-import os
-os.environ['PATH'] += f';{os.environ["PANDOC_PATH"]}'
+# import os
+# os.environ['PATH'] += f';{os.environ["PANDOC_PATH"]}'
