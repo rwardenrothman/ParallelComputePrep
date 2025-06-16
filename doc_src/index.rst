@@ -9,13 +9,14 @@ Takeda Parallel Compute Prep documentation
 This project serves as a learning resource for understanding and utilizing Amazon Web Services (AWS) for scientific computing. It focuses on exploring AWS Batch, AWS ParallelCluster, AWS HealthOmics, and AWS Step Functions to manage large-scale datasets, accelerate research workflows, and enable precision medicine.
 
 Key objectives include:
-- Gaining hands-on experience with AWS Batch for high-throughput and parallelized workloads.
-- Learning to deploy and manage traditional High-Performance Computing (HPC) environments with AWS ParallelCluster.
-- Exploring AWS HealthOmics for multi-omics data analysis and bioinformatics workflows.
-- Understanding how to orchestrate complex scientific pipelines using AWS Step Functions.
+
+   - Gaining hands-on experience with AWS Batch for high-throughput and parallelized workloads.
+   - Learning to deploy and manage traditional High-Performance Computing (HPC) environments with AWS ParallelCluster.
+   - Exploring AWS HealthOmics for multi-omics data analysis and bioinformatics workflows.
+   - Understanding when to choose AWS Step Functions, Batch, or ParallelCluster.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Contents:
 
    todo

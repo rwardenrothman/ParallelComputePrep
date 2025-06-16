@@ -43,6 +43,9 @@ myst_url_schemes = {
     },
 }
 
+myst_enable_extensions = [
+    'linkify',
+]
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
