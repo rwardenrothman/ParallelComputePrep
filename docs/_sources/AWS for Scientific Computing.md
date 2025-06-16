@@ -20,7 +20,7 @@ The strategic drivers underpinning Takeda's cloud adoption—namely, the pursuit
 
 AWS Batch is a fully managed service designed to execute batch computing workloads of virtually any scale within the cloud environment.5 It significantly reduces operational burden by abstracting away the complexities associated with provisioning and managing underlying compute resources, thereby enabling scientists and engineers to concentrate primarily on their computational jobs and data analysis rather than infrastructure management.5
 
-### **Batch Core Functionalities and Architecture**
+### Batch Core Functionalities and Architecture
 
 The architecture of AWS Batch is built upon several fundamental concepts that facilitate efficient job execution:
 
@@ -29,7 +29,7 @@ The architecture of AWS Batch is built upon several fundamental concepts that fa
 * **Job Queues:** Upon submission, jobs are placed into a job queue, which functions as a waiting area.5 The AWS Batch scheduler intelligently selects jobs from these queues and assigns them to available compute resources within an associated compute environment.5 Multiple job queues can be established and prioritized, and each queue can be linked to one or more compute environments, enabling granular control over job processing order and resource allocation.5  
 * **Compute Environments:** These represent the clusters of compute resources—which can be managed by AWS or user-managed—where the batch jobs are actually executed.5 AWS Batch dynamically provisions the optimal quantity and type of compute resources, including CPU-optimized, memory-optimized, or GPU instances, based on the volume of submitted jobs and their specified resource requirements.5
 
-### **Typical Use Cases in Scientific Computing**
+### Typical Use Cases in Scientific Computing
 
 AWS Batch is highly optimized for applications designed for horizontal scalability, where tasks can be executed in parallel across many compute instances.5 Its utility in scientific computing is broad:
 
@@ -38,7 +38,7 @@ AWS Batch is highly optimized for applications designed for horizontal scalabili
 * **Deep Learning Model Training and Hyperparameter Tuning:** The service supports the parallel execution of numerous training jobs, which is essential for efficient deep learning model development and hyperparameter optimization in AI/ML applications.5  
 * **Multi-Node Parallel Jobs with MPI Libraries:** Significantly, AWS Batch possesses the capability to run multi-node parallel jobs that leverage Message Passing Interface (MPI) libraries. This feature enables it to support traditional High-Performance Computing (HPC) workloads requiring inter-instance communication within its containerized framework.5 This adaptability allows for the execution of jobs with demanding CPU/GPU requirements and large memory footprints, common in complex scientific computations.5
 
-### **Batch Introductory Resources**
+### Batch Introductory Resources
 
 For organizations initiating their journey with AWS Batch, the following resources provide comprehensive guidance:
 
@@ -55,7 +55,7 @@ The explicit capability of AWS Batch to handle multi-node parallel jobs with MPI
 
 AWS ParallelCluster is a free, open-source cluster management tool designed to simplify the deployment and ongoing management of High-Performance Computing (HPC) clusters within the AWS environment.9 It streamlines the configuration of essential HPC components, including compute nodes, shared filesystems, and job schedulers, providing a familiar experience for HPC users.9
 
-### **ParallelCluster Core Functionalities and Architecture**
+### ParallelCluster Core Functionalities and Architecture
 
 AWS ParallelCluster is engineered to replicate the environment of a traditional HPC cluster while leveraging the elasticity and scalability of the cloud:
 
@@ -65,7 +65,7 @@ AWS ParallelCluster is engineered to replicate the environment of a traditional 
 * **Scalability:** Through its integration with Slurm and Amazon EC2, ParallelCluster dynamically scales the number of compute nodes based on the demands of the job queue.12 This provides automatic resource scaling, ensuring that compute capacity aligns with the requirements of HPC workloads.10  
 * **Security and Authentication:** ParallelCluster supports various authentication methods, including PAM, SAML, and OpenID Connect, and can be integrated with Active Directory for seamless user management in multi-user research environments.11
 
-### **Common Use Cases in Scientific Computing**
+### Common Use Cases in Scientific Computing
 
 AWS ParallelCluster is particularly well-suited for workloads that necessitate a traditional HPC cluster environment and its associated performance characteristics 12:
 
@@ -74,7 +74,7 @@ AWS ParallelCluster is particularly well-suited for workloads that necessitate a
 * **Finite Element Analysis (FEA) and Other Engineering Simulations:** Workloads that benefit from high-speed interconnects and shared storage to efficiently process large, complex models.  
 * **Lift-and-Shift HPC Migrations:** ParallelCluster facilitates a seamless transition for organizations with existing on-premises HPC clusters and their associated workloads, allowing them to migrate or burst capacity to the cloud with minimal modifications to their established environments.10
 
-### **ParallelCluster Introductory Resources**
+### ParallelCluster Introductory Resources
 
 To begin working with AWS ParallelCluster, the following resources are highly recommended:
 
@@ -91,7 +91,7 @@ AWS ParallelCluster's strong alignment with traditional HPC environments and sch
 
 AWS HealthOmics is a purpose-built service specifically designed to assist healthcare and life science organizations, along with their software partners, in storing, querying, and analyzing genomic, transcriptomic, and other omics data. Its primary objective is to generate actionable insights from this complex biological data to improve health outcomes.17 The service is engineered to support large-scale analysis and foster collaborative research environments.17
 
-### **Purpose and Key Features**
+### Purpose and Key Features
 
 AWS HealthOmics addresses the unique challenges of managing and processing massive biological datasets, which often span petabytes of information.
 
@@ -101,7 +101,7 @@ AWS HealthOmics addresses the unique challenges of managing and processing massi
 * **Built-in Security, Privacy, and Compliance:** A critical aspect for pharmaceutical companies, AWS HealthOmics is HIPAA eligible, ensuring that it meets stringent regulatory standards for protected health information. It includes built-in data access controls and comprehensive logging features to safeguard patient privacy and maintain regulatory compliance.17  
 * **Workflow Optimization Tools:** The "Run Analyzer" tool, an open-source command-line interface (CLI), provides extensive workflow analysis capabilities. It enables users to analyze multiple workflow runs in aggregate, visualize task timelines interactively, fine-tune resource recommendations with configurable safety margins, and automatically generate optimized configuration files. This functionality directly leads to reduced computational costs, enhanced workflow reliability, and an accelerated optimization process for bioinformatics pipelines.20
 
-### **Example Applications and Use Cases in Pharmaceutical Genomics**
+### Example Applications and Use Cases in Pharmaceutical Genomics
 
 AWS HealthOmics is designed to support a wide range of applications within pharmaceutical genomics and life sciences:
 
@@ -112,7 +112,7 @@ AWS HealthOmics is designed to support a wide range of applications within pharm
 * **Genomic Variant Analysis:** A practical workflow demonstrates its use in ingesting, processing, filtering (via Amazon Athena, requiring AWS Lake Formation integration), and analyzing genomic variant files (VCF) from large projects like the 1000 Genomes Project. This includes applying dimensionality reduction techniques such as Principal Component Analysis (PCA) with Amazon SageMaker to visualize population clusters and reveal correlations between genomic variations and geographical origins.19  
 * **Variant Calling Pipelines:** Natera successfully migrated a significant portion of its variant calling pipelines to AWS HealthOmics, resulting in a dramatic improvement in innovation cycles—from weeks or months down to days or hours—while strictly maintaining HIPAA compliance.22 Similarly, Amgen standardized and simplified access to cloud-based epigenomics analysis pipelines using HealthOmics, achieving a notable 40% overall cost savings.23
 
-### **HealthOmics Introductory Resources**
+### HealthOmics Introductory Resources
 
 For Takeda to explore AWS HealthOmics, the following introductory resources are recommended:
 
@@ -240,7 +240,7 @@ This table clarifies the distinct roles and benefits of utilizing Batch/Parallel
 
 To maximize the impact of cloud adoption on Takeda's R\&D initiatives, a strategic and tailored approach to leveraging AWS Batch, AWS ParallelCluster, AWS HealthOmics, and AWS Step Functions is essential. The optimal service selection depends heavily on the specific characteristics of each scientific problem.
 
-### **Selecting Optimal Services for Specific Scientific Problems**
+### Selecting Optimal Services for Specific Scientific Problems
 
 * **Large-Scale Genomics Pipelines (e.g., Variant Calling, RNA-Seq Analysis):**  
   * **AWS HealthOmics:** This should be the primary choice for specialized storage, management, and initial analysis of raw omics data. Takeda should leverage its purpose-built workflows and seamless integration with Amazon Athena for querying and Amazon SageMaker for downstream analysis.17 The HealthOmics Run Analyzer tool should be utilized for continuous workflow optimization and cost control.20  
@@ -278,7 +278,7 @@ AWS Batch, AWS ParallelCluster, and AWS HealthOmics offer distinct yet profoundl
 
 Crucially, AWS Step Functions emerges as the critical orchestration layer, enabling the construction of resilient, auditable, and automated multi-step scientific pipelines that seamlessly integrate these and other AWS services. By strategically adopting and integrating these AWS services, Takeda Pharmaceuticals can significantly accelerate its drug discovery and development cycles, enhance the depth and speed of data-driven insights, ensure stringent regulatory compliance, and ultimately bring life-changing medicines to patients faster.15 The continuous evolution of AWS services, including advancements in artificial intelligence/machine learning and the integration of cutting-edge quantum computing capabilities, positions Takeda to remain at the forefront of biomedical innovation, transforming scientific challenges into therapeutic breakthroughs.
 
-## **Works cited**
+## Works cited
 
 1. From Big Data to Precision Medicine: How AWS is Shaping the ..., accessed June 16, 2025, [https://businesscompassllc.com/from-big-data-to-precision-medicine-how-aws-is-shaping-the-biotech-industry/](https://businesscompassllc.com/from-big-data-to-precision-medicine-how-aws-is-shaping-the-biotech-industry/)  
 2. AWS in the Pharmaceutical Industry: Powering Drug Discovery, Development, and Beyond, accessed June 16, 2025, [https://intuitionlabs.ai/articles/aws-in-pharma-industry](https://intuitionlabs.ai/articles/aws-in-pharma-industry)  
