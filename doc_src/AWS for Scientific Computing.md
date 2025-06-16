@@ -1,6 +1,9 @@
-
-
 # Strategic Adoption of AWS for Scientific Computing at Takeda Pharmaceuticals: Batch, ParallelCluster, and HealthOmics
+
+## Prompt
+```plain text
+I'd like to learn more about a few AWS services: Batch, Parallel Cluster, and Healthomics. I would be using these to implement scientific support software for Takeda Pharmaceuticals. Could you please find a handful of introductory blog posts and tutorials for each? For the parallel compute services, please also compare and contrast them with each other and AWS step functions, with a focus on what types of problems are best suited for each.
+```
 
 ## 1. Executive Summary
 

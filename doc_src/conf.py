@@ -20,6 +20,7 @@ extensions = [
     'sphinx.ext.autosectionlabel',
     'sphinxcontrib.plantuml',
     'nbsphinx',
+    'sphinx_fontawesome',
 ]
 
 source_suffix = ['.rst', '.md']

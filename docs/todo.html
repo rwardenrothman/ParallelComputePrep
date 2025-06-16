@@ -211,7 +211,7 @@
       
       
       
-      <li><a href="_sources/todo.rst" target="_blank"
+      <li><a href="_sources/todo.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -221,7 +221,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.rst</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -282,7 +282,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -298,6 +300,18 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aws-batch-user-guide-getting-started"><em class="fa fa-square fa-regular"></em> AWS Batch User Guide: Getting Started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aws-batch-fetch-and-run-tutorial"><em class="fa fa-square fa-regular"></em> AWS Batch: Fetch and Run Tutorial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aws-parallelcluster-user-guide-tutorials-v3"><em class="fa fa-square fa-regular"></em> AWS ParallelCluster User Guide Tutorials (v3)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aws-parallelcluster-running-your-first-job"><em class="fa fa-square fa-regular"></em> AWS ParallelCluster: Running Your First Job</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aws-healthomics-set-up-account-and-utilize-service"><em class="fa fa-square fa-regular"></em> AWS HealthOmics: Set Up Account and Utilize Service</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -310,23 +324,31 @@ document.write(`
   <section id="to-do">
 <h1>To Do<a class="headerlink" href="#to-do" title="Link to this heading">#</a></h1>
 <p>Below is a list of tutorials to complete, each with a brief description of what you can expect to learn.</p>
-<ul class="simple">
-<li><p>[ ] <strong>AWS Batch User Guide: Getting Started</strong>
-Learn how to create compute environments, define and submit jobs, manage IAM permissions, and implement best practices for running large-scale workloads on AWS Batch.
-Link: <a class="reference external" href="https://docs.aws.amazon.com/batch/latest/userguide/Batch_GetStarted.html">https://docs.aws.amazon.com/batch/latest/userguide/Batch_GetStarted.html</a></p></li>
-<li><p>[ ] <strong>AWS Batch: Fetch and Run Tutorial</strong>
-Learn how to create a simple “fetch and run” AWS Batch job. This tutorial covers building a Docker image, uploading job scripts to Amazon S3, and dynamically executing scripts within Batch jobs.
-Link: <a class="reference external" href="https://aws.amazon.com/blogs/compute/creating-a-simple-fetch-and-run-aws-batch-job/">https://aws.amazon.com/blogs/compute/creating-a-simple-fetch-and-run-aws-batch-job/</a></p></li>
-<li><p>[ ] <strong>AWS ParallelCluster User Guide Tutorials (v3)</strong>
-Explore various tutorials on configuring and creating an HPC cluster using either the CLI or UI, connecting to your cluster, and executing MPI jobs. It also covers advanced topics like Active Directory integration and networking patterns.
-Link: <a class="reference external" href="https://docs.aws.amazon.com/parallelcluster/latest/ug/tutorials-v3.html">https://docs.aws.amazon.com/parallelcluster/latest/ug/tutorials-v3.html</a></p></li>
-<li><p>[ ] <strong>AWS ParallelCluster: Running Your First Job</strong>
-This step-by-step guide walks new users through creating their initial AWS ParallelCluster, logging into the head node, and submitting a job using the Slurm scheduler.
-Link: <a class="reference external" href="https://docs.aws.amazon.com/parallelcluster/latest/ug/tutorials-running-your-first-job-on-version-3.html">https://docs.aws.amazon.com/parallelcluster/latest/ug/tutorials-running-your-first-job-on-version-3.html</a></p></li>
-<li><p>[ ] <strong>AWS HealthOmics: Set Up Account and Utilize Service</strong>
-This hands-on activity guides users through setting up an AWS account, creating a reference store, and initiating the use of the AWS HealthOmics service.
-Link: <a class="reference external" href="https://tutorialsdojo.com/biology-data-the-cloud-aws-in-bioinformatics-awshealthomics/">https://tutorialsdojo.com/biology-data-the-cloud-aws-in-bioinformatics-awshealthomics/</a></p></li>
-</ul>
+<section id="aws-batch-user-guide-getting-started">
+<h2><em class="fa fa-square fa-regular"></em> AWS Batch User Guide: Getting Started<a class="headerlink" href="#aws-batch-user-guide-getting-started" title="Link to this heading">#</a></h2>
+<p>Learn how to create compute environments, define and submit jobs, manage IAM permissions, and implement best practices for running large-scale workloads on AWS Batch.
+Link: https://docs.aws.amazon.com/batch/latest/userguide/Batch_GetStarted.html</p>
+</section>
+<section id="aws-batch-fetch-and-run-tutorial">
+<h2><em class="fa fa-square fa-regular"></em> AWS Batch: Fetch and Run Tutorial<a class="headerlink" href="#aws-batch-fetch-and-run-tutorial" title="Link to this heading">#</a></h2>
+<p>Learn how to create a simple “fetch and run” AWS Batch job. This tutorial covers building a Docker image, uploading job scripts to Amazon S3, and dynamically executing scripts within Batch jobs.
+Link: https://aws.amazon.com/blogs/compute/creating-a-simple-fetch-and-run-aws-batch-job/</p>
+</section>
+<section id="aws-parallelcluster-user-guide-tutorials-v3">
+<h2><em class="fa fa-square fa-regular"></em> AWS ParallelCluster User Guide Tutorials (v3)<a class="headerlink" href="#aws-parallelcluster-user-guide-tutorials-v3" title="Link to this heading">#</a></h2>
+<p>Explore various tutorials on configuring and creating an HPC cluster using either the CLI or UI, connecting to your cluster, and executing MPI jobs. It also covers advanced topics like Active Directory integration and networking patterns.
+Link: https://docs.aws.amazon.com/parallelcluster/latest/ug/tutorials-v3.html</p>
+</section>
+<section id="aws-parallelcluster-running-your-first-job">
+<h2><em class="fa fa-square fa-regular"></em> AWS ParallelCluster: Running Your First Job<a class="headerlink" href="#aws-parallelcluster-running-your-first-job" title="Link to this heading">#</a></h2>
+<p>This step-by-step guide walks new users through creating their initial AWS ParallelCluster, logging into the head node, and submitting a job using the Slurm scheduler.
+Link: https://docs.aws.amazon.com/parallelcluster/latest/ug/tutorials-running-your-first-job-on-version-3.html</p>
+</section>
+<section id="aws-healthomics-set-up-account-and-utilize-service">
+<h2><em class="fa fa-square fa-regular"></em> AWS HealthOmics: Set Up Account and Utilize Service<a class="headerlink" href="#aws-healthomics-set-up-account-and-utilize-service" title="Link to this heading">#</a></h2>
+<p>This hands-on activity guides users through setting up an AWS account, creating a reference store, and initiating the use of the AWS HealthOmics service.
+Link: https://tutorialsdojo.com/biology-data-the-cloud-aws-in-bioinformatics-awshealthomics/</p>
+</section>
 </section>
 
 
@@ -364,6 +386,25 @@ Link: <a class="reference external" href="https://tutorialsdojo.com/biology-data
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aws-batch-user-guide-getting-started"><em class="fa fa-square fa-regular"></em> AWS Batch User Guide: Getting Started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aws-batch-fetch-and-run-tutorial"><em class="fa fa-square fa-regular"></em> AWS Batch: Fetch and Run Tutorial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aws-parallelcluster-user-guide-tutorials-v3"><em class="fa fa-square fa-regular"></em> AWS ParallelCluster User Guide Tutorials (v3)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aws-parallelcluster-running-your-first-job"><em class="fa fa-square fa-regular"></em> AWS ParallelCluster: Running Your First Job</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aws-healthomics-set-up-account-and-utilize-service"><em class="fa fa-square fa-regular"></em> AWS HealthOmics: Set Up Account and Utilize Service</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

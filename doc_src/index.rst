@@ -15,7 +15,7 @@ Key objectives include:
 - Understanding how to orchestrate complex scientific pipelines using AWS Step Functions.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    todo
