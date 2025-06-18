@@ -44,7 +44,7 @@ myst_url_schemes = {
 }
 
 myst_enable_extensions = [
-    'linkify',
+    'linkify', 'colon_fence'
 ]
 
 # -- Options for HTML output -------------------------------------------------

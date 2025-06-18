@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Choosing the Right Compute Orchestration Tool for Your Research Workload &#8212; Takeda Parallel Compute Prep  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notes/note-01';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="High Performance Computing Lens (AWS Well-Architected Framework)" href="note-02.html" />
+    <link rel="prev" title="Reading" href="../to-read.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Takeda Parallel Compute Prep  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">Tutorials</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../to-read.html">Reading</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><em class="fa fa-square-check fa-regular"></em> Choosing the Right Compute Orchestration Tool for Your Research Workload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="note-02.html"><em class="fa fa-square-check fa-regular"></em> High Performance Computing Lens (AWS Well-Architected Framework)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ai-overviews.html">AI Overviews</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../AWS%20for%20Scientific%20Computing.html">Strategic Adoption of AWS for Scientific Computing at Takeda Pharmaceuticals: Batch, ParallelCluster, and HealthOmics</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notes/note-01.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1> Choosing the Right Compute Orchestration Tool for Your Research Workload</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#link">Link</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#highlights">Highlights</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="choosing-the-right-compute-orchestration-tool-for-your-research-workload">
+<h1><em class="fa fa-square-check fa-regular"></em> Choosing the Right Compute Orchestration Tool for Your Research Workload<a class="headerlink" href="#choosing-the-right-compute-orchestration-tool-for-your-research-workload" title="Link to this heading">#</a></h1>
+<p>This article provides a detailed comparison of AWS Batch and AWS ParallelCluster, focusing on their architectural differences, scalability models, and suitability for distributed data processing versus tightly coupled HPC simulations. It helps in understanding which service is best for different research workloads.</p>
+<section id="link">
+<h2>Link<a class="headerlink" href="#link" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://aws.amazon.com/blogs/hpc/choosing-the-right-compute-orchestration-tool-for-your-research-workload/">https://aws.amazon.com/blogs/hpc/choosing-the-right-compute-orchestration-tool-for-your-research-workload/</a></p>
+</section>
+<section id="highlights">
+<h2>Highlights<a class="headerlink" href="#highlights" title="Link to this heading">#</a></h2>
+<ul>
+<li><p><a href="https://aws.amazon.com/hpc/parallelcluster/">AWS ParallelCluster</a> is a flexible tool for building and managing HPC clusters on AWS. It’s ideal for tightly coupled workloads, like running simulations or analytics that require a traditional HPC cluster.</p></li>
+<li><p>Figure 1 – Overview of AWS ParallelCluster and its components for HPC workloads. Integration with Slurm and Amazon EC2 right-sizes compute node numbers based on the job queue. Amazon FSx for Lustre allows for access to a high-performance file system while also taking advantage of Amazon S3 object storage. All of this is connected using Elastic Fabric Adapter (EFA) which provide extremely high-performance connectivity and scaling for tightly-coupled workloads.</p>
+<ul class="simple">
+<li><p><img alt="Figure 1" src="https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Frobwarden27%40gmail.com%2Fuploads%2F2025-06-18T13%3A35%3A06.734Z-image.png?alt=media&amp;token=7cc73e26-23c1-495e-92d1-4ad9b9f45b6f" /></p></li>
+</ul>
+</li>
+<li><p><a href="https://aws.amazon.com/batch/">AWS Batch</a> is suited for highly parallel, container-based jobs, including tightly-coupled workloads</p></li>
+<li><p>AWS Batch leverage existing containerized applications</p></li>
+<li><p>Figure 2 – AWS Batch workflow illustrating container-based job processing and integration with AWS services. Compatibility with Amazon EKS and ECS allows for flexibility at the Compute Environment layer.</p>
+<ul class="simple">
+<li><p><img alt="Figure 2" src="https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Frobwarden27%40gmail.com%2Fuploads%2F2025-06-18T13%3A36%3A09.422Z-image.png?alt=media&amp;token=35e825be-5425-4af7-bb49-29fc65685397" /></p></li>
+</ul>
+</li>
+<li><p><a href="https://aws.amazon.com/sagemaker/">Amazon SageMaker</a> is ideal for machine learning workloads, especially those developed in Jupyter Notebooks</p></li>
+<li><p>SageMaker provides a managed ecosystem of ML and data science tools, covering the entire spectrum from data discovery and exploration to model training and deployment.</p></li>
+<li><p>SageMaker also contains pre-trained models, allowing researchers to jump-start their ML projects</p></li>
+<li><p>Figure 3 – <a href="https://aws.amazon.com/pm/sagemaker">Amazon SageMaker</a> ecosystem showcasing high-level end-to-end process from data preparation to model deployment. Integrates with services like <a href="https://aws.amazon.com/efs/">Amazon EFS</a> for a local file system in notebooks and also with highly-optimized AWS Deep Learning Containers for training models.</p>
+<ul class="simple">
+<li><p><img alt="" src="https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Frobwarden27%40gmail.com%2Fuploads%2F2025-06-18T13%3A37%3A55.964Z-image.png?alt=media&amp;token=6ca1c7eb-9e6d-46b4-bd05-75bc24f0df35" /></p></li>
+</ul>
+</li>
+<li><p>SageMaker, Batch, and ParallelCluster can all use Spot Instances to take advantage of their favorable economics. In the case of Spot Instances, you’ll need to verify that your workload can tolerate interruptions from reclaimed capacity</p></li>
+<li><p>generally speaking – it’s worthwhile to see if you can use Spot or Fargate with AWS orchestration tools for your research.</p></li>
+<li><p><a href="https://aws.amazon.com/hpc/res/">Research and Engineering Studio on AWS</a> (RES) is an open-source web-based portal for administrators to create and manage secure, cloud-based research and engineering environments.</p></li>
+<li><p><a href="https://aws.amazon.com/healthomics/">AWS HealthOmics</a> is a comprehensive solution for bioinformatics work. It facilitates raw genomic storage and processing, allowing researchers to store and analyze genomic data. It supports popular bioinformatics workflow definition languages like WDL and Nextflow, enabling researchers to process and analyze genomic data efficiently.</p></li>
+<li><p>Figure 6 – AWS HealthOmics platform structure highlighting genomic data processing and analysis capabilities. Raw sequence and reference data can be processed through Nextflow or WDL workflows and then analyzed via AWS analytics services such as <a href="https://aws.amazon.com/athena/">Amazon Athena</a>.</p>
+<ul class="simple">
+<li><p><img alt="" src="https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Frobwarden27%40gmail.com%2Fuploads%2F2025-06-18T13%3A38%3A24.941Z-image.png?alt=media&amp;token=10e1cc40-bbfc-4875-a45b-2ca5bde5b2bd" /></p></li>
+</ul>
+</li>
+<li><p>researchers have been using serverless computing to speed up embarrassingly parallel workloads, too – including ML hyperparameter optimization, genome search, and even MapReduce.</p></li>
+<li><p><a href="https://aws.amazon.com/lambda/">AWS Lambda</a> is a serverless interface for running code without managing servers. It’s designed for loosely coupled workloads, allowing researchers to run code in response to events like changes in data (or the arrival of data). Lambda scales automatically, enabling you to run thousands of concurrent executions.</p>
+<ul>
+<li><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Gonna need to look up loosely coupled vs. tightly coupled workloads. It seems important to this decision.</p>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Lambda, combined with Step Functions, is useful for workloads that involve different compute steps, data needs, and may even require decision gates or human input.</p></li>
+<li><p>Figure 7 – Illustration of a sample serverless computing architecture: a data stream of jobs to be processed is picked up by AWS Lambda and put into a downstream <a href="https://aws.amazon.com/sqs/">Amazon SQS</a> queue. AWS Step Functions then reads from this queue and handles the heavy lifting of distributed compute orchestration via Lambda worker functions. Step Functions also leverages <a href="https://aws.amazon.com/dynamodb/">Amazon DynamoDB</a> for workload state management, event handling with <a href="https://aws.amazon.com/eventbridge/">Amazon EventBridge</a> and storing processed results in Amazon S3.</p>
+<ul class="simple">
+<li><p><img alt="" src="https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Frobwarden27%40gmail.com%2Fuploads%2F2025-06-18T13%3A38%3A52.908Z-image.png?alt=media&amp;token=8dbb5675-ac3c-4447-b0a4-d2910ecefe07" /></p></li>
+</ul>
+</li>
+<li><p>Choosing the right AWS compute orchestration tool is not about finding a one-size-fits-all solution but about aligning the tool’s capabilities with the specific requirements of your workload. The nuances of your project, the nature of your data, and your computational needs <em>should</em> guide your decision.</p></li>
+<li><p>We recommend consulting with your research team and AWS account team to help you make the best decision for your project.</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../to-read.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Reading</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="note-02.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><em class="fa fa-square-check fa-regular"></em> High Performance Computing Lens (AWS Well-Architected Framework)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#link">Link</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#highlights">Highlights</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Rob Warden-Rothman
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Rob Warden-Rothman.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

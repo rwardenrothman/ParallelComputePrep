@@ -1,4 +1,4 @@
-# To Do
+# Tutorials
 
 Below is a list of tutorials to complete, each with a brief description of what you can expect to learn.
 
