@@ -1,4 +1,4 @@
-# {fa}`square fa-regular` Following the Well Architected Framework (edX Course)
+# {fa}`pen-to-square fa-regular` Following the Well Architected Framework (edX Course)
 
 ## Link
 https://learning.edx.org/course/course-v1:AWS+CTC-Capstone-Architected+3T2023/home
