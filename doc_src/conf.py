@@ -2,6 +2,8 @@
 #
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
+from sphinx.application import Sphinx
+from subprocess import run
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
@@ -61,3 +63,13 @@ plantuml_output_format = 'svg'
 
 # import os
 # os.environ['PATH'] += f';{os.environ["PANDOC_PATH"]}'
+
+def post_build(app: Sphinx, error: Exception | None) -> None:
+    print('post_build')
+    c = 'git -c credential.helper= -c core.quotepath=false -c log.showSignature=false add --ignore-errors -A --'.split()
+    c.append(app.outdir)
+    run(c)
+
+def setup(app: Sphinx):
+    app.connect('build-finished', post_build)
+

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>High Performance Computing Lens (AWS Well-Architected Framework) &#8212; Takeda Parallel Compute Prep  documentation</title>
+    <title>AWS Technical Essentials &#8212; Takeda Parallel Compute Prep  documentation</title>
   
   
   
@@ -41,11 +41,11 @@
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notes/note-02';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'class_notes/class-02';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Classes" href="../classes.html" />
-    <link rel="prev" title="Choosing the Right Compute Orchestration Tool for Your Research Workload" href="note-01.html" />
+    <link rel="next" title="Solution Architect Learning Plan" href="class-03.html" />
+    <link rel="prev" title="Following the Well Architected Framework (edX Course)" href="class-01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -152,16 +152,16 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../todo.html">Tutorials</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../to-read.html">Reading</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="note-01.html"><em class="fa fa-square-check fa-regular"></em> Choosing the Right Compute Orchestration Tool for Your Research Workload</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#"><em class="fa fa-square-check fa-regular"></em> High Performance Computing Lens (AWS Well-Architected Framework)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../to-read.html">Reading</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../notes/note-01.html"><em class="fa fa-square-check fa-regular"></em> Choosing the Right Compute Orchestration Tool for Your Research Workload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notes/note-02.html"><em class="fa fa-square-check fa-regular"></em> High Performance Computing Lens (AWS Well-Architected Framework)</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../classes.html">Classes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../class_notes/class-01.html"><em class="fa fa-square fa-regular"></em> Following the Well Architected Framework (edX Course)</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../classes.html">Classes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="class-01.html"><em class="fa fa-square fa-regular"></em> Following the Well Architected Framework (edX Course)</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../class_notes/class-02.html">AWS Technical Essentials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../class_notes/class-03.html">Solution Architect Learning Plan</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">AWS Technical Essentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class-03.html">Solution Architect Learning Plan</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ai-overviews.html">AI Overviews</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -222,7 +222,7 @@
       
       
       
-      <li><a href="../_sources/notes/note-02.md" target="_blank"
+      <li><a href="../_sources/class_notes/class-02.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -306,7 +306,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1> High Performance Computing Lens (AWS Well-Architected Framework)</h1>
+    <h1>AWS Technical Essentials</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -317,9 +317,6 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#link">Link</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#highlights-overview">Highlights - Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#highlights-loosely-coupled">Highlights - Loosely Coupled</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#highlights-tightly-coupled">Highlights - Tightly Coupled</a></li>
 </ul>
             </nav>
         </div>
@@ -331,38 +328,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="high-performance-computing-lens-aws-well-architected-framework">
-<h1><em class="fa fa-square-check fa-regular"></em> High Performance Computing Lens (AWS Well-Architected Framework)<a class="headerlink" href="#high-performance-computing-lens-aws-well-architected-framework" title="Link to this heading">#</a></h1>
-<p>This AWS Documentation will inform me on the differences between tightly and loosely coupled HPC architectures.</p>
+  <section id="aws-technical-essentials">
+<h1>AWS Technical Essentials<a class="headerlink" href="#aws-technical-essentials" title="Link to this heading">#</a></h1>
 <section id="link">
 <h2>Link<a class="headerlink" href="#link" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://docs.aws.amazon.com/wellarchitected/latest/high-performance-computing-lens/scenarios.html">https://docs.aws.amazon.com/wellarchitected/latest/high-performance-computing-lens/scenarios.html</a></p>
-</section>
-<section id="highlights-overview">
-<h2>Highlights - Overview<a class="headerlink" href="#highlights-overview" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>HPC is divided into two categories based on the degree of interaction between the concurrently running parallel processes: loosely coupled and tightly coupled workloads</p></li>
-<li><p>Loosely coupled HPC cases are those where the multiple or parallel processes don’t strongly interact with each other in the course of the entire simulation</p></li>
-<li><p>Tightly coupled HPC cases are those where the parallel processes are simultaneously running and regularly exchanging information between each other at each iteration or step of the simulation.</p></li>
-<li><p>With loosely coupled workloads, the completion of an entire calculation or simulation often requires hundreds to millions of parallel processes. These processes occur in any order and at any speed through the course of the simulation.</p></li>
-<li><p>Tightly coupled workloads have processes that regularly exchange information at each iteration of the simulation.</p></li>
-</ul>
-</section>
-<section id="highlights-loosely-coupled">
-<h2>Highlights - Loosely Coupled<a class="headerlink" href="#highlights-loosely-coupled" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>A loosely coupled workload entails the processing of a large number of smaller jobs. Generally, the smaller job runs on one node, either consuming one process or multiple processes with shared memory parallelization (SMP) for parallelization within that node.</p></li>
-<li><p>Loosely coupled applications are found in many areas, including Monte Carlo simulations, image processing, genomics analysis, and Electronic Design Automation (EDA)</p></li>
-<li><p>The loss of one node or job in a loosely coupled workload usually doesn’t delay the entire calculation. The lost work can be picked up later or omitted altogether. The nodes involved in the calculation can vary in specification and power.</p></li>
-</ul>
-</section>
-<section id="highlights-tightly-coupled">
-<h2>Highlights - Tightly Coupled<a class="headerlink" href="#highlights-tightly-coupled" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Tightly coupled applications consist of parallel processes that are dependent on each other to carry out the calculation.</p></li>
-<li><p>The failure of one node usually leads to the failure of the entire calculation.</p></li>
-<li><p>Examples of tightly coupled HPC workloads include: computational fluid dynamics, weather prediction, and reservoir simulation.</p></li>
-</ul>
+<p><a class="reference external" href="https://skillbuilder.aws/learn/K8C2FNZM6X/aws-technical-essentials/N7Q3SXQCDY">https://skillbuilder.aws/learn/K8C2FNZM6X/aws-technical-essentials/N7Q3SXQCDY</a></p>
 </section>
 </section>
 
@@ -378,20 +348,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="note-01.html"
+       href="class-01.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><em class="fa fa-square-check fa-regular"></em> Choosing the Right Compute Orchestration Tool for Your Research Workload</p>
+        <p class="prev-next-title"><em class="fa fa-square fa-regular"></em> Following the Well Architected Framework (edX Course)</p>
       </div>
     </a>
     <a class="right-next"
-       href="../classes.html"
+       href="class-03.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Classes</p>
+        <p class="prev-next-title">Solution Architect Learning Plan</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -412,9 +382,6 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#link">Link</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#highlights-overview">Highlights - Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#highlights-loosely-coupled">Highlights - Loosely Coupled</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#highlights-tightly-coupled">Highlights - Tightly Coupled</a></li>
 </ul>
   </nav></div>
 

@@ -21,4 +21,5 @@ Key objectives include:
 
    todo
    to-read
+   classes
    ai-overviews
